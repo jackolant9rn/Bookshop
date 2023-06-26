@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    top:0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    height: 116px;
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 42, 57, 1);
+}
+
+.header_nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+    color: rgba(92, 106, 121, 1);
+}
+
+.header_nav:hover {
+    font-weight: 900;
+    color: black;
+}
+
+.profile {
+    display: flex;
+    gap:40px;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cart::after {
+    visibility: var(--hidden);
+    content: attr(data-style-type);
+    position: relative;
+    top: 2px;
+    left: -13px;
+    padding: 1px 4px 1px 4px;
+    color: #FFFFFF;
+    background-color: var(--color);
+    border-radius: 50%;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 12px;
+    text-transform: capitalize;
+}
+
+:root {
+    --color: #FF353A;
+    --hidden: hidden;
+}
+
+/* SLIDER */
+
+.slider {
+    width: 100%;
+    height: auto;
+    z-index:-1;
+    position: relative;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100px;
+    margin: 20px auto 0 auto;
+}
+
+.dots>div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #EFEEF6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots>div:first-child {
+    background-color: #9E98DC
+}
+
+button {
+    display: inline;
+}
+
+.change_book {
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    padding-bottom: 36px;
+    padding-left: 21px;
+    position: absolute;
+    top:79px;
+    right: -100px;
+    height: 204px;
+    width: 149px;
+    border-radius: 0px;
+    background: #9E98DC;
+    box-shadow: 0px 24px 36px 0px #35315447;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.change_book>p {
+    height: 66px;
+    width: 109px;    
+}
+
+.top_books {
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    padding-bottom: 36px;
+    padding-left: 21px;
+    position: absolute;
+    bottom:79px;
+    right: -182px;
+    height: 273px;
+    width: 137px;
+    box-shadow: 0px 24px 36px 0px #35315447;
+    border-radius: 0px;
+    background: #FF8FE6;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.top_books>p{
+    height: 88px;
+    width: 69px;
+    text-transform: uppercase;
+}
+
+.slider_images {
+    margin-top: 105px;
+    margin-bottom: 135px;
+}
+    
+.slider_box {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1120px;
+}
+
+/* CATALOG */
+
+.catalog {
+    position: relative;
+    height: 710px;
+    width: 416px;
+    border-radius: 0px;    
+}
+
+.catalog_ul {
+    width: 416px;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:23px;
+}
+
+.catalog_ul_a {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #5C6A79;
+    cursor: pointer;
+}
+
+.active {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1C2A39;
+}
+
+.load_more {
+    width: 176px;
+    height: 45px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    color: #4C3DB2;
+    border: 1px solid #4C3DB2;
+    text-transform: uppercase;
+    display: block;
+    margin: 84px auto 74px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.catalog_cover {
+    position: absolute;
+    width: 416px;
+    height: 710px;
+    background: #EFEEF6;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.flex {
+    display: flex;
+}
+
+/* BOOKS */
+
+.description {
+    width: 176px;
+    align-self: top;
+    margin: 40px auto 0px;
+}
+
+.cards {
+    padding-top: 50px;
+    margin-left: -60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+}
+
+.card {
+    display: flex;
+    width: 424px;
+}
+
+.cover {
+    height: 327px;
+    width: 212px;
+    left: 356px;
+    top: 977px;
+    border-radius: 0px;
+    box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+}
+
+.author {
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#5C6A79 ;
+}
+
+.title{
+    margin-top: 4px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#1C2A39;
+}
+
+.rating {
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #5C6A79;
+    margin-top: 5px;
+}
+
+.review {
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #5C6A79;
+    margin-top: 17px;
+}
+
+.price {
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#1C2A39;
+    margin-top: 16px;
+}
+
+.buy {
+    cursor: pointer;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    font-family: Montserrat;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#4C3DB2;
+    background: #FFFFFF;
+    margin-top: 16px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+
+    .slider-box {
+        position: static;
+    }
+
+    .slider_images {
+        margin-bottom: 35px;
+    }
+        
+    .change_book {
+        display: none;
+    }
+    
+    .top_books {
+        display: none;
+    }
+        
+    .catalog {
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: #EFEEF6;
+        padding-bottom: 30px;
+    }
+    
+    .catalog_cover{
+        display: none;
+    }
+    
+    .catalog_ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+    
+    .cards {
+        margin-left: 0;
+        justify-content: space-around;
+    }
+    
+    .card {
+        gap: 3%;
+    }
+
+    .cover {
+        width: 50%;
+        max-width: 200px;
+        height: auto;
+    }
+    
+    .flex {
+        flex-direction: column;
+    }
+}
